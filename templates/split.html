@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Split
+{% endblock %}
+
+{% block header %}
+<h1>Split image</h1>
+{% endblock %}
+
+
+{% block main %}
+    <div class="center" style="margin-top: 40px; padding-bottom: 0; align-items:start">
+        
+        <div class="group" style="width: 60%; margin: 0;">
+            <div class="img-container" style="height: 500px;">
+                {% if file_url %}
+                    <img id="img_merged" src="{{ file_url }}" class="imgg">
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="group-options" style="margin: 0; width: 30%; ">
+
+            <h2>Options</h2>
+
+            <form class="group-options"  method="post" enctype="multipart/form-data" class="buttons" action="/send_form" style="margin: 0; width: 100%">
+                <div style="margin: 20px; width: 100%">
+                   <input type="file" class="form-control" name="file">
+                </div>
+                <div style="margin: 20px; width: 100%">
+                    <input type="submit" class="btn btn-success" style="width: 100%;" value="Upload" name="split.html" style="margin: 0; width: 100%">
+                </div>
+            </form>
+
+            <form class="group-options" style="width: 100%; height: 300px" action="/get_split" method="post" >
+
+                <div style="display: flex; justify-content: space-evenly; width: 100%; margin: 20px">
+                    <label style="width: 40%; font-weight: 600; font-size: 22px; color: #0B5345;">Rows:</label>
+                    <input id="row_val" type="number" name="rows" value="1" min="1" style="padding: 0; width: 40%;" onchange="get_stripes();">
+                </div>
+    
+                <div style="display: flex; justify-content: space-evenly; width: 100%; margin: 20px">
+                    <label style="width: 40%; font-weight: 600; font-size: 22px; color: #0B5345;">Columns:</label>
+                    <input id="column_val" type="number" name="columns" value="1" min="1" style="padding: 0; width: 40%;" onchange="get_stripes();">
+                </div>
+                
+                <input type="submit" class="btn btn-success" style="width: 100%; margin: 20px" value="Split" name="split.html"></input>
+    
+            </form>
+        </div>
+        
+
+        
+
+        
+    
+        
+    </div>
+{% endblock %}

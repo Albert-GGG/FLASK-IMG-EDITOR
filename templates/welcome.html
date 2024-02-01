@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block header %}
+<h1>Apply simple filters and more!</h1>
+{% endblock %}
+
+
+{% block main %}
+    <div class="center">
+        
+        <div class="group">
+            <h2 id="welcomeh">Upload image</h2>
+            <div class="img-container">
+                {% if file_url %}
+                    <img src="{{ file_url }}" class="imgg">
+                {% endif %}
+            </div>
+            <form method="post" enctype="multipart/form-data" class="buttons" action="/send_form">
+                <div style="width: 70%; display: inline-block">
+                   <input type="file" class="form-control" name="file">
+                </div>
+                <div style="width: 26%; display: inline-block">
+                    <input type="submit" class="btn btn-success" style="width: 100%;" value="Upload" name="welcome.html">
+                </div>
+            </form>
+        </div>
+
+        <div class="group-options">
+            <h2>Select a filter</h2>
+            <a class="btn btn-success button-op"  href="{{ url_for('go_to', page='gray_scale.html', with_photo=True) }}">Gray scale</a>
+            <a class="btn btn-outline-success button-op"  href="{{ url_for('go_to', page='contours.html', with_photo=True) }}">Contours</a>
+            <a class="btn btn-success button-op"  href="{{ url_for('go_to', page='brightness.html', with_photo=True) }}">Brightness</a>
+            <a class="btn btn-outline-success button-op"  href="{{ url_for('go_to', page='blurring.html', with_photo=True) }}">Blurring</a>
+            <a class="btn btn-success button-op"  href="{{ url_for('go_to', page='split.html', with_photo=True) }}">Split</a>
+        </div>
+        
+        
+        
+        
+        
+    
+        
+    </div>
+{% endblock %}

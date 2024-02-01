@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Gray scale
+{% endblock %}
+
+{% block header %}
+<h1>Gray scale filter</h1>
+{% endblock %}
+
+
+{% block main %}
+    <div class="center">
+        
+        <div class="group">
+            <h2>Original image</h2>
+            
+            <div class="img-container">
+                {% if file_url %}
+                    <img src="{{ file_url }}" class="imgg">
+                {% endif %}
+            </div>
+
+            <form method="post" enctype="multipart/form-data" class="buttons" action="/send_form">
+                <div style="width: 70%; display: inline-block">
+                   <input type="file" class="form-control" name="file">
+                </div>
+                <div style="width: 26%; display: inline-block">
+                    <input type="submit" class="btn btn-success" style="width: 100%;" value="Upload" name="gray_scale.html">
+                </div>
+            </form>
+        </div>
+
+        <div class="group">
+            <h2>Gray scale</h2>
+            <div class="img-container">
+                {% if file_url_ad %}
+                    <img src="{{ file_url_ad }}" class="imgg">
+                {% endif %}
+            </div>
+            <div class="buttons">
+                
+                <a href="/to_gray" type="submit" class="btn btn-success" style="width: 30%;">Convert</a>
+            
+                <div style="width: 30%; display: inline-block">
+                    <a class="btn btn-success" style="width: 90%" href="/download">Download</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+{% endblock %}

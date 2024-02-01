@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+}
+
+.navt{
+    font-size: larger;
+    margin-left: 10px;
+    height: 60px;
+    line-height: 40px; 
+    
+}
+
+.navt:hover{
+    background-color: #0a493d;
+}
+
+.navt:focus{
+    background-color: #0a493d;
+}
+
+#navbarm{
+    background-color: #0E6655;
+    padding: 0;
+    height: 60px;
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 35px;
+    color: #0B5345;
+    font-weight: bold;
+}
+
+
+.center{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 95%;
+    margin-top: 60px;
+    border: 2px black;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 48%;
+    border: 1px #ccc;
+    margin: 0;
+    text-align: center;
+}
+
+.group-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 20%;
+    border: 1px #ccc;
+    margin: 0px;
+    align-items: center;
+}
+
+.buttons{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.img-container{
+    width: 100%;
+    height: 400px;
+    border: ridge rgb(9, 134, 124) 5px;
+    margin-bottom: 20px;
+    background-color: #ccc;
+    /* TAKES WIDTH AND APPLIES MARGIN TO IT */
+}
+
+
+.imgg{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+h2{
+    margin: 20px;
+}
+
+.block{
+    float: left;
+}
+
+#center-items{
+    margin: auto;
+}
+
+.button_download{
+    background-color: purple;
+    float: left;
+    color: white;
+}
+
+.button-op{
+    width: 100%;
+    margin: 5px;
+}
+
+.slider {
+    width: 40%;
+    height: 12px;
+    padding: 5px;
+    background: #018369;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+   }
+
+.slider input[type="range"] {
+    -webkit-appearance: none !important;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none
+}
+
+.slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 32px;
+    height:32px;
+    background: url('bright_sun.svg');
+    border-radius: 50%;
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+#blurs::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 27px;
+    height:27px;
+    background: #ccc;
+    background-image: url('bright.svg');
+    border-radius: 50%;
+    cursor: pointer;
+    transform: rotateX(180deg);
+}
+    
+#rangeValue {
+    margin: 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black 2px;
+    width: 12%;
+    border: solid #0B5345;
+}
+
+#welcomeh{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+
+
+    
+
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1100px){
+    
+    .center{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group{
+        width: 98%;
+    }
+
+    .group-options{
+        flex-basis: 50%;
+        height: 500px;
+    }
+}
+
+
+
+
+

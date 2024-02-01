@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Brightness
+{% endblock %}
+
+{% block header %}
+<h1>Brightness adjustment</h1>
+{% endblock %}
+
+
+{% block main %}
+    <div class="center">
+        
+        <div class="group">
+            <h2>Original image</h2>
+            
+            <div class="img-container">
+                {% if file_url %}
+                    <img src="{{ file_url }}" class="imgg">
+                {% endif %}
+            </div>
+
+            <form method="post" enctype="multipart/form-data" class="buttons" action="/send_form">
+                <div style="width: 70%; display: inline-block">
+                   <input type="file" class="form-control" name="file">
+                </div>
+                <div style="width: 26%; display: inline-block">
+                    <input type="submit" class="btn btn-success" style="width: 100%;" value="Upload" name="brightness.html">
+                </div>
+            </form>
+        </div>
+
+        <div class="group">
+            <h2 id="headt">Brightness</h2>
+            <div class="img-container">
+                {% if file_url %}
+                    <img src="{{ file_url }}" class="imgg" id="mod_bright">
+                {% endif %}
+            </div>
+            <div class="buttons">
+                <label style="width: 10%; font-weight: 600; font-size: 22px; color: #0B5345; margin: 0;">Adjust:</label>
+                
+                <div class="slider">
+                    <input type="range" id="rangeSlider" min="-100" max="100" value="0" step="10" onchange="slider_photo('mod_bright', this.value);">
+                </div> 
+                
+                <p id="rangeValue">0</p>
+                
+                <div style="width: 15%; display: inline-block">
+                    <a class="btn btn-success" style="width: 100%" href="/download">Download</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+{% endblock %}
