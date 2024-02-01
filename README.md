@@ -1,5 +1,7 @@
 # SMPL Image Editor
 
+# Video demo: <https://www.youtube.com/watch?v=z6l47ms0PMw>
+
 #### Description:
 
 SMPL image editor (pronounced "simple") is a  web application that allows users to apply simple filters to images: Gray scale,
