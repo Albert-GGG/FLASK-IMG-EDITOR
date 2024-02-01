@@ -1,0 +1,6 @@
+Flask==2.2.2
+Flask_Reuploaded==1.4.0
+numpy==1.24.2
+numpy==1.23.5
+opencv_python==4.7.0.72
+Werkzeug==2.2.2
