@@ -1,6 +1,8 @@
 # SMPL Image Editor
 
-# Video demo: <https://www.youtube.com/watch?v=z6l47ms0PMw>
+## Video demo: <https://www.youtube.com/watch?v=z6l47ms0PMw>
+
+### Use: Download zip file and run app.py
 
 #### Description:
 
